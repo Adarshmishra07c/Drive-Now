@@ -37,10 +37,16 @@ app.use("/api/booking", bookingRouter);
 // ===== Start Server AFTER DB Connected =====
 connectDb()
   .then(() => {
-    app.listen(PORT, () => {
-      console.log(`Server started at http://localhost:${PORT}`);
-    });
+    // Only bind the port if we are NOT running in Vercel's serverless environment
+    if (!process.env.VERCEL) {
+      app.listen(PORT, () => {
+        console.log(`Server started at http://localhost:${PORT}`);
+      });
+    }
   })
   .catch((err) => {
     console.log("Database connection failed ❌", err.message);
   });
+
+// Export the app for Vercel Serverless
+module.exports = app;
