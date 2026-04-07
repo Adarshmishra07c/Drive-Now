@@ -58,8 +58,8 @@ const Contact = () => {
         <div>
           <h2 className="font-semibold text-gray-800 mb-4">Get in Touch</h2>
           <div className="text-sm space-y-2">
-            <p>+91 9508709274</p>
-            <p>amishrahsm@gmail.com</p>
+            <p>+91 9304025091</p>
+            <p>am1494400@gmail.com</p>
           </div>
         </div>
 
