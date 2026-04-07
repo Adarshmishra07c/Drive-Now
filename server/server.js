@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 // ===== CORS (VERY IMPORTANT FOR COOKIES) =====
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000', 'http://localhost:5175'],
+    origin: ['https://drive-now-tau.vercel.app', 'http://localhost:5173', 'http://localhost:5174', 'http://localhost:3000', 'http://localhost:5175'],
     credentials: true,
   })
 );
